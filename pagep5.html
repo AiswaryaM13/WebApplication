@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+	<style>
+	body {
+	    background-color: linen;
+	}
+
+	td {
+	    border-top-style: solid;
+	}
+	</style>
+	</head>
+	<body>
+
+	<table style="width:100%">
+	  <tr style="font-weight:bold; background-color: orange">
+	    <td width="300px">Single-instance version cases</td>
+	    <td>Graph Results Screenshot</td>
+	    <td>Average Query Time(ms)</td>
+	    <td>Average Search Servlet Time(ms)</td>
+	    <td>Average JDBC Time(ms)</td>
+	    <td>Analysis</td>
+	  </tr>
+	  <tr>
+	    <td>Case 1: HTTP/1 thread</td>
+	    <td><img src="C:\Users\lenovo\Desktop\cs122b-winter19-team-90-master\capture.JPG" alt="Graph Results Screenshot Case 1" style="width:304px;height:228px;"></td>
+    <td>304</td>
+    <td>204.49</td>
+	    <td>121.45</td>
+	    <td>--</td>
+	  </tr>
+	  <tr>
+	    <td>Case 2: HTTP/10 threads</td>
+	    <td><img src="C:\Users\lenovo\Desktop\cs122b-winter19-team-90-master\capture2.JPG" alt="Graph Results Screenshot Case 2" style="width:304px;height:228px;"></td>
+    <td>461</td>
+	    <td>231.27</td>
+	    <td>169.89</td>
+	    <td>--</td>
+	  </tr>
+	  <tr>
+	    <td>Case 3: HTTPS/10 threads</td>
+	    <td><img src="C:\Users\lenovo\Desktop\cs122b-winter19-team-90-master\capture5.JPG" alt="Graph Results Screenshot Case 3" style="width:304px;height:228px;"></td>
+    <td>1975</td>
+	    <td>326.57</td>
+	    <td>172.35</td>
+	    <td>With Connection Pooling the performance, load is distributed better and performance improves</td>
+	  </tr>
+	  <tr>
+	    <td>Case 4: HTTP/10 threads/No prepared statements</td>
+	    <td><img src="C:\Users\lenovo\Desktop\cs122b-winter19-team-90-master\capture3.JPG" alt="Graph Results Screenshot Case 4" style="width:304px;height:228px;"></td>
+	    <td>496</td>
+	    <td>352.61</td>
+	    <td>0.000408</td>
+	    <td>--</td>
+	  </tr>
+	  <tr>
+	    <td>Case 5: HTTP/10 threads/No connection pooling</td>
+	    <td><img src="C:\Users\lenovo\Desktop\cs122b-winter19-team-90-master\capture4.JPG" alt="Graph Results Screenshot Case 4" style="width:304px;height:228px;"></td>
+	    <td>447</td>
+	    <td>349.20</td>
+	    <td>232.65</td>
+	    <td>--</td>
+	  </tr>
+
+	</table>
+
+
+<table style="width:100%">
+	  <tr style="font-weight:bold; background-color: orange">
+	    <td width="300px">Scaled version cases</td>
+	    <td>Graph Results Screenshot</td>
+	    <td>Average Query Time(ms)</td>
+	    <td>Average Search Servlet Time(ms)</td>
+	    <td>Average JDBC Time(ms)</td>
+	    <td>Analysis</td>
+  </tr>
+	  <tr>
+	    <td>Case 1: HTTP/1 thread</td>
+	    <td><img src="C:\Users\lenovo\Desktop\cs122b-winter19-team-90-master\capture7.JPG" alt="Graph Results Screenshot Case 1" style="width:304px;height:228px;"></td>
+	    <td>87</td>
+	    <td>1.42</td>
+    <td>1.02</td>
+	    <td>--</td>
+	  </tr>
+	  <tr>
+	    <td>Case 2: HTTP/10 threads</td>
+	    <td><img src="C:\Users\lenovo\Desktop\cs122b-winter19-team-90-master\capture6.JPG" alt="Graph Results Screenshot Case 2" style="width:304px;height:228px;"></td>
+	    <td>252</td>
+    <td>5.15</td>
+	    <td>2.93</td>
+	    <td>With Connection Pooling the performance, load is distributed better and performance improves</td>
+  </tr>
+  <tr>
+    <td>Case 3: HTTP/10 threads/No prepared statements</td>
+	    <td><img src="C:\Users\lenovo\Desktop\cs122b-winter19-team-90-master\capture8.JPG" style="width:304px;height:228px;"></td>
+	    <td>203</td>
+	    <td>5.88</td>
+	    <td>0.000406</td>
+	    <td>--</td>
+	  </tr>
+	  <tr>
+	    <td>Case 4: HTTP/10 threads/No connection pooling</td>
+	    <td><img src="C:\Users\lenovo\Desktop\cs122b-winter19-team-90-master\capture9.JPG" alt="Graph Results Screenshot Case 4" style="width:304px;height:228px;"></td>
+	    <td>267</td>
+	    <td>5.30</td>
+	    <td>2.39</td>
+	    <td>Without Connection Pooling the performance goes down a bit during heavy load. Scaled Version ha even better performance than single instance.</td>
+	  </tr>
+
+	</table>
+
+	</body>
+	</html>

@@ -1,0 +1,180 @@
+<!-- This page will be seen if you logged in -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fablix</title>
+    
+    <!-- Using jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- include jquery autocomplete JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.7/jquery.autocomplete.min.js"></script>
+	    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    
+    <style>
+       
+  #top{
+  font-weight: 700;
+  border: 1px solid black;
+  outline-style: double;
+  padding: 15px;
+  text-Align:center;
+  }
+ #head1{
+    position:absolute;
+    left: 700px;
+    font-weight: 800;
+    }
+ #search{
+    position:absolute;
+    left: 200px;
+    }
+#head2{
+    position:absolute;
+    left: 650px;
+    font-weight: 800;
+    }
+ #letter{
+    position:absolute;
+    left: 650px;
+    }
+#head3{
+    position:absolute;
+    left: 650px;
+    font-weight: 800;
+    }
+#genre{
+    position:absolute;
+    left: 550px;
+    }
+#gobackfromstars_body{
+  position: absolute; 
+  right: 10px;
+  }
+body{
+ background-color: coral;
+}
+#goback{
+  position: absolute; 
+  left: 10px;
+  }
+    </style>
+    
+</head>
+<body>
+
+<h1 id="top">Welcome to Fablix!</h1>
+<h3 id="head1"> Search By:</h3>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<label>Movie Title</label>
+<div class="container">
+<input type="text" name="movtitle" id="autocomplete" class="autocomplete-searchbox form-control" placeholder="Search Title"/>
+</div>
+
+<!-- <form ACTION="#" id="search" METHOD="get">
+    <label>Movie Title</label>
+    <input type="text" name="movie_title" >
+    <label>Movie Year</label>
+    <input type="text"  name="movie_year">
+    <label>Movie Director</label>
+    <input type="text" name="movie_director" >
+    <label>Movie Stars</label>
+    <input type="text"  name="movie_stars">
+    <input type="submit" VALUE="search">-->
+</form>
+<br/>
+<br/>
+<br/>
+
+<h3 id="head2"> Browse By: First Letter</h3>
+<br/>
+<br/>
+<br/>
+<br/>
+<form ACTION="#" id="letter" METHOD="get">
+<label>First Letter:</label>
+    <select name="letter">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+  <option value="H">H</option>
+  <option value="I">I</option>
+  <option value="J">J</option>
+  <option value="K">K</option>
+  <option value="L">L</option>
+  <option value="M">M</option>
+  <option value="N">N</option>
+  <option value="O">O</option>
+  <option value="P">P</option>
+  <option value="Q">Q</option>
+  <option value="R">R</option>
+  <option value="S">S</option>
+  <option value="T">T</option>
+  <option value="U">U</option>
+  <option value="V">V</option>
+  <option value="W">W</option>
+  <option value="X">X</option>
+  <option value="Y">Y</option>
+  <option value="Z">Z</option>
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+</select>
+<input type="submit" VALUE="search">
+</form>
+
+<br/>
+<br/>
+<br/>
+<h3 id="head3"> Browse By:Genre Name</h3>
+<br/>
+<br/>
+<br/>
+<table class="table table-striped" id="genre">
+   <thead>
+    <tr>
+    </tr>
+    </thead>
+    <tbody id=genre_list></tbody>
+</table>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h3 id="goback"><a href="javascript:history.go(-1);" class = "button">Go back</a><br></h3>
+<br/>
+<br/>
+<h3 id="gobackfromstars_body"><a href = "cart.html" > Go to Checkout Page </a></h3>
+<!-- include your own JS file -->
+<!-- Load jQuery and Bootstrap JS -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+<script type='text/javascript' src='search.js'></script>
+</body>
+</html>

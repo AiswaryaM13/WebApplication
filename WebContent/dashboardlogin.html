@@ -1,0 +1,67 @@
+<!-- This page will be redirected from any url if you are not logged in -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+    #head{
+    position:absolute;
+    left: 700px;
+    font-weight: 1000;
+    font-weight: 700;
+    }
+    #login_error_message{
+    position:absolute;
+    left: 680px;
+    font-weight: 1000;
+    font-weight: 700;
+    }
+    body{
+    background-color: #ffdfc6;
+    }
+    #check{
+    position:absolute;
+    left: 550px;
+    font-weight: 900;
+    background-color:coral;
+    border: 1px solid;
+  padding: 90px;
+  box-shadow: 5px 10px #888888;
+    }
+    </style>
+    <title>Login to Fablix</title>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body>
+<h2 id="head">Login to Fablix</h2>
+<br/>
+<br/>
+<br/>
+<br/>
+<!-- Set the method to POST to avoid showing the username/password in the URL
+     The default action is disabled to allow your own implementation. -->
+     <div id="check">
+     <form id="employeelogin_form" method="post" action="#">
+    <label><b>Employee Name</b></label>
+    <input type="text" placeholder="Enter Username" name="username">
+    <br>
+    <br>
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password">
+    <br>
+    <br>
+    <input type="submit" value="Login">
+    </CENTER>
+		<div class="g-recaptcha" data-sitekey="6Lft9Y8UAAAAAKe38hnT39tPWkIJIf9qpO_keW1a"></div>
+    </form>
+     </div>
+
+<div id="employeelogin_error_message"></div>
+
+<!-- include jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- include our own JS file -->
+<script src="./dashboardlogin.js"></script>
+
+</body>
+</html>

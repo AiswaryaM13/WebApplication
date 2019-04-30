@@ -1,0 +1,61 @@
+<!-- This page will be seen if you logged in -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    <style>
+      #search_goback_body{
+  position: absolute; 
+  left: 10px;
+  }
+  #head{
+  font-weight: 700;
+  border: 1px solid black;
+  outline-style: double;
+  padding: 15px;
+  text-Align:center;
+  }
+  #sessionID{
+  position: absolute; 
+  right: 550px;
+  }
+  #lastAccessTime{
+  position: absolute; 
+  right: 570px;
+  }
+  #checkout_body{
+  position: absolute; 
+  right: 10px;
+  }
+  #employeelogin_body{
+  position: absolute; 
+  right: 10px;
+  }
+ body{
+ background-color: coral;
+} 
+    </style>
+    
+    <title>Fablix</title>
+</head>
+<body>
+<h1 id ="head">Welcome to Fablix!</h1>
+<h3 id="sessionID"></h3>
+<br/>
+<br/>
+<br/>
+<br/>
+<h3 id="lastAccessTime"></h3>
+
+<h3 id="search_goback_body"><a href = "search.html" > Go to Search Page </a></h3>
+<h3 id="checkout_body"><a href = "cart.html" > Go to Checkout Page </a></h3>
+</br>
+</br>
+<h3 id="employeelogin_body"><a href = "dashboardlogin.html" > Go to Dashboard Page </a></h3>
+
+<!-- include your own JS file -->
+<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+<script type='text/javascript' src='main.js'></script>
+</body>
+</html>

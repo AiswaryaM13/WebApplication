@@ -1,0 +1,21 @@
+LIKE terms-
+
+1. used in MovieList.java
+1.1) title like?-> 
+Input given can be either of the two- Either it is a sub-string of the movie title to check against. Or it is the first letter of the movie title to search from the database. This is used for searching/browsing the database according to the input. If the user has given a sub-string of movie title to search from, then that is used as input. Else if user has given the first character of the movie title to search from, then that is used as input in the place of ?.
+ 
+1.2) director like?->
+Input given is any substring of the director name to search from the database. This is used for searching the database according to input director name.
+
+1.3) s.name like?->
+Input given is any substring of the star name to search from database. This is used for searching movies according to input star name.
+
+1.4) year like?->
+Input given is any substring of the year to search from database. This is used for searching movies according to year.
+
+1.5) g.name like?->
+Input given is any substring of the genre name to search from the database. This is used for browsing the database according to genre name.
+
+
+
+

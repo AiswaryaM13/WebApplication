@@ -1,0 +1,82 @@
+<!-- This page will be redirected from any url if you are not logged in -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+    
+    #head{
+    position:absolute;
+    left: 700px;
+    font-weight: 1000;
+    font-weight: 700;
+    }
+    body{
+    background-color: #ffdfc6;
+    }
+    #check{
+    position:absolute;
+    left: 550px;
+    font-weight: 900;
+    background-color:coral;
+    border: 1px solid;
+  padding: 50px;
+  box-shadow: 5px 10px #888888;
+    }
+  #goback{
+    position:absolute;
+    left: 750px;
+    bottom: 100px;
+    font-weight: 1000;
+    font-weight: 700;
+    }
+    </style>    
+    <title>Checkout</title>
+</head>
+<body>
+<br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+<h2 id="head">Checkout Page</h2>
+<!-- Set the method to POST to avoid showing the username/password in the URL
+     The default action is disabled to allow your own implementation. -->
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <div id="check">
+<form id="checkout_form" method="post" action="#">
+    <label><b>Customer Details</b></label>
+    <label><b>Customer Id</b></label>
+    <input type="text" placeholder="Enter Customer Id" name="id">
+    <br>
+    <br>
+    <label><b>First Name</b></label>
+    <input type="text" placeholder="Enter First Name" name="FirstName">
+    <br>
+    <br>
+    <label><b>Last Name</b></label>
+     <input type="text" placeholder="Enter Last Name" name="LastName">
+    <br>
+    <br>
+    <label><b>Credit Card Expiration Date</b></label>
+     <input type="text" placeholder="Enter Expiry Date" name="expiry">
+    <br>
+    <br>
+    <input type="submit" value="Checkout">
+</form>
+<div id="Checkout_error_message"></div>
+</div>
+
+<h3 id ="goback"><a href="javascript:history.go(-1);" class = "button">Go back</a></h3>
+
+<!-- include jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- include our own JS file -->
+<script src="./checkout.js"></script>
+
+</body>
+</html>

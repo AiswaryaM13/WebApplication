@@ -1,0 +1,159 @@
+<!-- This example is following frontend and backend separation.
+
+    This .html performs two steps:
+    1. Create a html template skeleton, with all the elements defined (some left empty) and named with ids.
+    2. Load index.js to populate the data into empty elements.
+    -->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+#top{
+  text-align: center;
+  color: maroon;
+}
+
+#movie_table{
+color: maroon;
+}
+
+tr:nth-child(even){
+  font-style: italic;
+	background-color: #ffdfc6;
+	color: maroon;}
+	  
+tr:nth-child(odd){
+  font-style: italic;
+  background-color: #f89445;
+  color: maroon;}
+  
+  
+  #top{
+  font-weight: 700;
+  border: 1px solid black;
+  outline-style: double;
+  padding: 25px;
+  }
+  
+  #wrapper{
+  display: flex; 
+  justify-content: center;
+  }
+  
+ .left{
+  position: absolute; 
+  left: 10px;
+  }
+  
+  .right{
+  position: absolute; 
+  right: 10px;
+  }
+  
+  .center{
+  position: absolute; 
+  right: 600px;
+  }
+  
+  #search_goback_body{
+  position: absolute; 
+  left: 10px;
+  }
+  
+  #checkout_body{
+  position: absolute; 
+  right: 10px;
+  }
+ #goback{
+  position: absolute; 
+  left: 660px;
+  }
+  
+</style>
+    <title>Movies List</title>
+</head>
+<body>
+<br />
+<h1 id= "top">Searched Movie Results</h1>
+
+<div id="wrapper">
+<form ACTION="#" id="sorttitleasc" METHOD="post"> 
+ <input type="submit" VALUE="Sort by Title-Ascending" name="sorttitleasc"></input>	
+ </form>
+ <form ACTION="#" id="sorttitledesc" METHOD="post"> 
+ <input type="submit" VALUE="Sort by Title-Descending" name="sorttitledesc"></input>	
+ </form>
+ <form ACTION="#" id="sortratingasc" METHOD="post"> 
+ <input type="submit" VALUE="Sort by Rating-Ascending" name="sortratingasc"></input>	
+ </form>
+ <form ACTION="#" id="sortratingdesc" METHOD="post"> 
+ <input type="submit" VALUE="Sort by Rating-Descending" name="sortratingdesc"></input>	
+ </form>
+</div>
+
+<!-- Id "star_table" is useful for jQuery to find the html element with id, class here is mapping to Bootstrap defined class CSS -->
+    <!-- Create a table header -->
+      <table align = "center" id=movie_table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+    	<th>Index</th>
+    	<th>Movie Id</th>
+        <th>Movie Title</th>
+        <th>Release Year</th>
+        <th>Director</th>
+        <th>Genre</th>
+        <th>Stars</th>
+        <th>Rating</th>
+        <th>Add To Cart</th>
+    </tr>
+    </thead>
+    <!-- Table body is left empty here, will be populated with the data retrieved with index.js -->
+    <!-- Again, id "star_table_body" is useful for jQuery to find this html element -->
+    <tbody id=movies_table_body></tbody>
+</table>
+ 
+<div>
+<form ACTION="#" id="pageprev" METHOD="post" class="left"> 
+ <input type="submit" VALUE="Prev" name="pageprev"></input>	
+ </form>
+
+<form ACTION="#" id="numperpage" METHOD="post" class="center">
+    <label>Entries per page</label>
+    <input type="text" name="numperpage">
+    <input type="submit" VALUE="select">
+</form>
+
+<form ACTION="#" id="pagenext" METHOD="post" class="right"> 
+ <input type="submit" VALUE="Next" name="pagenext"></input>	
+ </form>
+</div>
+<br/>
+<br/>
+<br/><br/>
+<h3 id="goback"><a href="javascript:history.go(-1);" class = "button">Go back</a><br></h3>
+<h3 id="search_goback_body"><a href = "search.html" > Go to Search Page </a></h3>
+<h3 id="checkout_body"><a href = "cart.html" > Go to Checkout Page </a></h3>
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Load our own JS file -->
+<!-- The path is relative to index.html, since these two files are in the same directory -->
+<!-- Note the url does not contain a "/" in the beginning, which means the url is relative to current path
+     otherwise the url is relative to the root path-->
+<script src="movies.js"></script>
+</body>
+
+
+</html>

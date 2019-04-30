@@ -1,0 +1,133 @@
+<!-- This example is following frontend and backend separation.
+
+    This .html performs two steps:
+    1. Create a html template skeleton, with all the elements defined (some left empty) and named with ids.
+    2. Load single-star.js to populate the data into empty elements.
+    -->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Single Movie</title>
+    <style>
+#movie_goback_body {
+  position: absolute;
+    right:20px;
+  }
+  
+  #movie_info{
+  text-align: center;
+  font-style: italic;
+  color: maroon;
+  }
+  
+  #Movie_table{
+  text-align: center;
+  background-color: #deeaee;
+  font-style: italic;
+  color: maroon;
+  }
+  
+ #movie_table1{
+  text-align: center;
+  font-style: italic;
+  background-color:#f89445;
+  color: maroon;
+  }
+  #movie_genre_table_body{
+  text-align: center;
+  font-style: italic;
+  background-color:#ffdfc6;
+  color: maroon;
+  }
+  
+  #movie_star_table_body{
+  text-align: center;
+  font-style: italic;
+  background-color:#ffdfc6;
+  }
+
+ #movie_table2{
+  text-align: center;
+  font-style: italic;
+  background-color:#f89445;
+  color: maroon;
+  }
+
+  #search_goback_body{
+  position: absolute; 
+  left: 10px;
+  }
+  
+  #checkout_body{
+  position: absolute; 
+  right: 10px;
+  }
+  #goback{
+  position: absolute; 
+  right: 700px;
+  }
+</style>
+</head>
+<body>
+<h3 id="Movie_table">Single Movie Page</h3>
+
+<!-- H3 body is left empty here, will be populated with the data retrieved with single-star.js -->
+<!-- single-star.js will find this html element by it's id "star_info" -->
+<h1 id="movie_info"></h1>
+<table id=movie_table1 class="table table-striped">
+    <thead>
+    <tr>
+        <th>Star Name</th>
+    </tr>
+    </thead>
+
+    <!-- Table body is left empty here, will be populated with the data retrieved with single-star.js -->
+    <!-- single-star.js will find this html element by it's id "movie_table_body" -->
+    <tbody id="movie_star_table_body"></tbody>
+</table>
+
+<table id=movie_table2 class="table table-striped">
+    <thead>
+    <tr>
+        <th>Genre Name</th>
+    </tr>
+    </thead>
+
+    <!-- Table body is left empty here, will be populated with the data retrieved with single-star.js -->
+    <!-- single-star.js will find this html element by it's id "movie_table_body" -->
+    <tbody id="movie_genre_table_body"></tbody>
+</table>
+ <h5 id="movie_goback_body"></h5>
+<br/>
+<br/>
+<br/><br/>
+<h3 id="goback"><a href="javascript:history.go(-1);" class = "button">Go back</a><br></h3>
+<h3 id="search_goback_body"><a href = "search.html" > Go to Search Page </a></h3>
+<h3 id="checkout_body"><a href = "cart.html" > Go to Checkout Page </a></h3>
+
+
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Load our own JS file -->
+<!-- The path is relative to single-star.html, since these two files are in the same directory -->
+<!-- Note the url does not contain a "/" in the beginning, which means the url is relative to current path
+     otherwise the url is relative to the root path-->
+<script src="single-movie.js"></script>
+</body>
+
+
+</html>

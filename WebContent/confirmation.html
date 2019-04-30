@@ -1,0 +1,75 @@
+<!-- This page will be seen if you logged in -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>confirmation</title>
+    <style>
+     #confirm_table2{
+     position:absolute;
+     right: 660px;
+  text-align: center;
+  background-color: #f89445;
+  font-style: italic;
+  color: maroon;
+  }
+    body{
+    background-color: #66ff99;
+    }
+    #confirm_table_body{
+  text-align: center;
+  font-style: italic;
+  background-color:#ffdfc6;
+  color: maroon;
+  }
+  #message{
+  text-align: center;
+  font-style: italic;
+  background-color:#ffdfc6;
+  color: maroon;
+  }
+   #search_goback_body{
+  position: absolute; 
+  left: 10px;
+  }
+  
+  #checkout_body{
+  position: absolute; 
+  right: 10px;
+  }
+ #goback{
+  position: absolute; 
+  left: 10px;
+  }
+    </style>
+</head>
+<body>
+
+<h3 id="message">Congratulations. Your order is confirmed!</h3>
+<table id="confirm_table2" class="table table-striped table-bordered">
+<thead>
+<tr>
+	<th>Sale Id</th>
+	<th>Movie Name</th>
+	<th>Quantity</th>
+</tr>
+</thead>
+<tbody id="confirm_table_body"></tbody>
+</table>
+<br/>
+<br/>
+<h3 id="goback"><a href="javascript:history.go(-1);" class = "button">Go back</a><br/></h3>
+<br/>
+<br/>
+<h3 id="search_goback_body"><a href = "search.html" > Go to Search Page </a></h3>
+<h3 id="checkout_body"><a href = "cart.html" > Go to Checkout Page </a></h3>
+
+
+<!-- include your own JS file -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+<script type='text/javascript' src="./confirmation.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!-- This page will be redirected from any url if you are not logged in -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+    
+    #head{
+    position:absolute;
+    left: 700px;
+    font-weight: 1000;
+    font-weight: 700;
+    }
+    body{
+    background-color: #ffdfc6;
+    }
+    #check{
+    position:absolute;
+    right: 200px;
+    font-weight: 900;
+    background-color:coral;
+    border: 1px solid;
+  padding: 50px;
+  box-shadow: 5px 10px #888888;
+    }
+    #ckeck2{
+    position:absolute;
+    left: 200px;
+    font-weight: 900;
+    background-color:coral;
+    border: 1px solid;
+  padding: 50px;
+  box-shadow: 5px 10px #888888;
+    }
+  #goback{
+    position:absolute;
+    right: 250px;
+    bottom: 100px;
+    font-weight: 1000;
+    font-weight: 700;
+    }
+    #meta_body{
+    position:absolute;
+    left: 250px;
+    bottom: 100px;
+    font-weight: 1000;
+    font-weight: 700;
+    }
+    #search_goback_body{
+  position: absolute; 
+  left: 10px;
+  bottom: 100px;
+  }
+  #checkout_body{
+  position: absolute; 
+  right: 10px;
+  bottom: 100px;
+  }
+    </style>    
+    <title>Dashboard</title>
+</head>
+<body>
+<br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+<h2 id="head">Dashboard Page</h2>
+<!-- Set the method to POST to avoid showing the username/password in the URL
+     The default action is disabled to allow your own implementation. -->
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <div id="check">
+<form id="dashboard_form" method="post" action="#">
+    <label><b>Add Star Details</b></label>
+    <input type="text" placeholder="Enter Star Name" name="star">
+    <br>
+    <br>
+    <label><b>First Name</b></label>
+    <input type="text" placeholder="Birth Year" name="year">
+    <br>
+    <br>
+    <input type=submit value="Add">
+</form>
+<div id="dashboard_error_message"></div>
+</div>
+<div id ="ckeck2">
+<form id="add_movie" method="get" action="#">
+    <label><b>Movie name</b></label>
+    <input type="text" placeholder="Enter movie name" name="moviename" required>
+    <br>
+    <br>
+    <label><b>Movie year</b></label>
+    <input type="text" placeholder="Enter movie year" name="movieyear">
+    <br>
+    <br>
+	<label><b>Movie director</b></label>
+    <input type="text" placeholder="Enter movie director" name="moviedirector">
+    <br>
+    <br> 
+    <label><b>Movie genre</b></label>
+    <input type="text" placeholder="Enter movie genre" name="moviegenre">
+    <br>
+    <br>
+    <label><b>Movie star name</b></label>
+    <input type="text" placeholder="Enter movie star name" name="moviestarname">
+    <br>
+    <br>   
+    <input type=submit value="Add">
+</form>
+<div id="addmovie_error_message"></div>
+</div>
+
+<h3 id="meta_body"><a href = "meta.html" > Show Meta Data </a></h3>
+</br>
+</br>
+<h3 id ="goback"><a href="javascript:history.go(-1);" class = "button">Go back</a></h3>
+</br>
+<h3 id="search_goback_body"><a href = "search.html" > Go to Search Page </a></h3>
+<h3 id="checkout_body"><a href = "cart.html" > Go to Checkout Page </a></h3>
+<!-- include jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- include our own JS file -->
+<script src="./dashboard.js"></script>
+
+</body>
+</html>
